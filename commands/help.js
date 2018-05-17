@@ -137,8 +137,8 @@ module.exports.run = (bot, message, args) => {
   
   if (!msg) {
     em
-    .setDescription("**Use b!help [category] for help on a certain category, or b!help [command] for help on a certain command.")
-    .addField(`Categories`, `**${cats.join("\n")}**`)
+    .setDescription("**Use b!help [category] for help on a certain category, or b!help [command] for help on a certain command.**")
+    .addField(`Categories`, `**${cats.join("\n")}**`, true)
     .addField(`Links`, `[GitHub](${git}) | [Support](${support})\n[Invite](${invite})`, true)
     message.channel.send({embed: em})
   }
