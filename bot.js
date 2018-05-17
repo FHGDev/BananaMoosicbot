@@ -37,7 +37,7 @@ bot.on('message', message => {
   if (message.author.bot) return console.log(new RangeError("Author is bot."));
   if (!message.guild) return console.log(new RangeError("No guild."));
   if (cmd) {
-    cmd.run(bot, message, args);
+    cmd.run(bot, message, args, key);
     console.log(`${message.author.username} used the ${logcmd} command.`)
     //baselogger(bot, `${message.author.username} used the ${logcmd} command.`, bot.user.avatarURL)
   }
