@@ -1,4 +1,4 @@
-const RichEmbed = require('discord.js')
+const discord = require('discord.js')
 
 module.exports.run = (bot, message, args) => {
   let cmds = ["help", "support", "statchange", "activitychange", "8ball", "invite", "meme", "coinflip", "yomomma", "ping", "uptime"];
@@ -7,7 +7,7 @@ module.exports.run = (bot, message, args) => {
   let botcmds = ["ping", "uptime", "statchange", "activitychange"]
   let funcmds = ["8ball", "meme", "coinflip", "yomomma"]
   let msg = args.join(" ");
-  let em = new RichEmbed()
+  let em = new discord.RichEmbed()
   .setTitle("Help Menu")
   .setColor("RANDOM")
   .setTimestamp()
