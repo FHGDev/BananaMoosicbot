@@ -39,18 +39,17 @@ module.exports.run = (bot, message, args) => {
   
   if (msg == cmds[0].toLowerCase() || msg == cmds[0]) {
     em
-    .setDescription(`Help`)/*
+    .setDescription(`Help`)
     .addField(`Usage`, `This command's usage is ${require('./help.js').help.usage}.`, true)
     .addField(`Info`, `This command's info is ${require('./help.js').help.info}.`)
-    */
     message.channel.send({embed: em})
   }
   
   if (msg == cmds[1].toLowerCase() || msg == cmds[1]) {
     em
     .setDescription(`Support`)
-    /*.addField(`Usage`, `This command's usage is ${require('./support.js').help.usage}.`, true) */
-   /* .addField(`Info`, `This command's info is ${require('./support.js').help.info}.`, true) */
+    /*.addField(`Usage`, `This command's usage is ${require('./support.js').help.usage}.`, true)
+    .addField(`Info`, `This command's info is ${require('./support.js').help.info}.`, true) */
     message.channel.send({embed: em})
   }
   
