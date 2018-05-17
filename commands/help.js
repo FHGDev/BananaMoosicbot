@@ -75,7 +75,7 @@ module.exports.run = (bot, message, args) => {
     em
     .setDescription(`8ball`)/*
     .addField(`Usage`, `This command's usage is ${require('./8ball.js').help.usage}.`, true)
-    .addField(`Info`, `This command's info is ${require('./8ball.js').help.usage}.`)
+    .addField(`Info`, `This command's info is ${require('./8ball.js').help.usage}.`, true)
     */
     message.channel.send({embed: em})
   }
