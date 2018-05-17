@@ -127,7 +127,7 @@ module.exports.run = (bot, message, args) => {
   
   if (msg == cmds[10].toLowerCase() || msg == cmds[10]) {
     em
-    .setDescription("Uptime")
+    .setDescription("Uptime")/*
     .addField(`Usage`, `This command's usage is '${require('./uptime.js').help.usage}.'`, true)
     .addField(`Info`, `This command's info is '${require('./uptime.js').help.info}.'`, true)
     */
