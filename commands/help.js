@@ -7,6 +7,9 @@ module.exports.run = (bot, message, args) => {
   let botcmds = ["ping", "uptime", "statchange", "activitychange"]
   let funcmds = ["8ball", "meme", "coinflip", "yomomma"]
   let msg = args.join(" ");
+  let git = "https://github.com/FHGDev/BananaMoosicbot/tree/view"
+  let invite = bot.invite
+  let support = bot.support
   let em = new discord.RichEmbed()
   .setTitle("Help Menu")
   .setColor("RANDOM")
@@ -22,17 +25,16 @@ module.exports.run = (bot, message, args) => {
   
   if (msg == cats[1].toLowerCase() || msg == cats[1]) {
     em
-    .setTitle("Bot commands")
     .setDescription(`Here is a list of my ${cats[1]} commands.`)
-    .addField("Bot :robot:", `**${botcmds.join(" ")}**`, true)
+    .addField("Bot :robot:", `**${botcmds.join("\n")}**`, true)
     message.channel.send({embed: em})
   }
   
   if (msg == cats[2].toLowerCase() || msg == cats[2]) {
     em
-    .setTitle("Fun commands")
     .setDescription(`Here is a list of my ${cats[2]} commands.`)
     .addField(`Fun :lollipop:`, `**${funcmds.join("\n")}**`, true)
+    message.channel.send({embed: em})
   }
   
   if (msg == cmds[0].toLowerCase() || msg == cmds[0]) {
@@ -135,7 +137,10 @@ module.exports.run = (bot, message, args) => {
   
   if (!msg) {
     em
-    .setDescription()
+    .setDescription("**Use b!help [category] for help on a certain category, or b!help [command] for help on a certain command.")
+    .addField(`Categories`, `**${cats.join("\n")}**`)
+    .addField(`Links`, `[GitHub](${git}) | [Support](${support})\n[Invite](${invite})`, true)
+    message.channel.send({embed: em})
   }
   
 }
