@@ -34,8 +34,8 @@ bot.on('message', message => {
   const logcmd = mArray[0].slice(prefix.length)
   const cmd = bot.commands.get(logcmd)
   if (!message.content.startsWith(prefix)) return;
-  if (message.author.bot) return throw new RangeError("Author is bot.");
-  if (!message.guild) return throw new RangeError("No guild.");
+  if (message.author.bot) return console.log(new RangeError("Author is bot."));
+  if (!message.guild) return console.log(new RangeError("No guild."));
   if (cmd) {
     cmd.run(bot, message, args);
     console.log(`${message.author.username} used the ${logcmd} command.`)
