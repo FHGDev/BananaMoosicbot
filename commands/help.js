@@ -118,10 +118,10 @@ module.exports.run = (bot, message, args) => {
   
   if (msg == cmds[9].toLowerCase() || msg == cmds[9]) {
     em
-    .setDescription("Ping")/*
+    .setDescription("Ping")
     .addField(`Usage`, `This command's usage is ${require('./ping.js').help.usage}.`, true)
     .addField(`Info`, `This command's info is ${require('./ping.js').help.info}.`, true)
-    */
+ 
     message.channel.send({embed: em})
   }
   
