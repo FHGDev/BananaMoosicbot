@@ -2,8 +2,8 @@ const discord = require('discord.js')
 
 module.exports.run = (bot, message, args) => {
   let cmds = ["help", "support", "statchange", "activitychange", "8ball", "invite", "meme", "coinflip", "yomomma", "ping", "uptime"];
-  let cats = ["Help", "Bot", "Fun"];
-  let helpcmds = ["More help", "support", "invite"]
+  let cats = ["More help", "Bot", "Fun"];
+  let helpcmds = ["help", "support", "invite"]
   let botcmds = ["ping", "uptime", "statchange", "activitychange"]
   let funcmds = ["8ball", "meme", "coinflip", "yomomma"]
   let msg = args.join(" ");
