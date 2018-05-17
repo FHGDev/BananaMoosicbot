@@ -33,7 +33,7 @@ bot.on('message', message => {
   const args = mArray.slice(1)
   const logcmd = mArray[0].slice(prefix.length)
   const cmd = bot.commands.get(logcmd)
-  if (!message.content.startsWith(prefix) throw new RangeError("No prefix in message, canceling.");
+  if (!message.content.startsWith(prefix) return throw new RangeError("No prefix in message, canceling.");
   if (message.author.bot) return throw new RangeError("Author is bot.");
   if (!message.guild) return throw new RangeError("No guild.");
   if (cmd) {
