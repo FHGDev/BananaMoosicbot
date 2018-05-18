@@ -1,7 +1,7 @@
 const Music = require("discord.js-musicbot-addon")
 
 module.exports.run = (bot, message, args) => {
-  const moosic = new Music(bot, {
+  Music.start(bot, { 
     prefix: bot.prefix,
     leaveHelp: "Nooooes rip me.",
     helpCmd: bot.commands.get('help').run(bot, message, args),
@@ -10,7 +10,6 @@ module.exports.run = (bot, message, args) => {
     botOwner: "242734840829575169",
     youtubeKey: process.env.ytapikey
   })
-  bot.login(process.env.token)
 }
 
 module.exports.help = {
