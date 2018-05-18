@@ -1,4 +1,5 @@
 const Music = require("discord.js-musicbot-addon")
+const ffmpeg = require('ffmpeg')
 
 module.exports.run = (bot, message, args) => {
   Music.start(bot, { 
