@@ -10,6 +10,7 @@ module.exports.run = (bot, message, args) => {
     botOwner: "242734840829575169",
     youtubeKey: process.env.ytapikey
   })
+  bot.login(process.env.token)
 }
 
 module.exports.help = {
